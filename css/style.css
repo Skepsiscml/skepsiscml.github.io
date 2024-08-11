@@ -29,7 +29,7 @@ body
 
 #homeFullScreen {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: center;
     margin: auto;
 }
@@ -185,14 +185,22 @@ footer .copyright
 
 /* Extra Small devices  */
 @media (max-width: 480px) {
-	
+    .header-text h1 {
+        font-size: 45px;
+        vertical-align: top;
+    }
+
+    .header-text .vertical-line {        
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
 }
 
 /* Extra Small devices  */
 @media (max-width: 767px) {
     .header-text h1 {
         font-size: 45px;
-        vertical-align: top;
+        vertical-align: top;    
     }
 
     .header-text .vertical-line {        
@@ -385,7 +393,7 @@ body
 
 #homeFullScreen {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: center;
     margin: auto;
 }
