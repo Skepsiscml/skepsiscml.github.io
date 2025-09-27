@@ -1,101 +1,228 @@
 <!DOCTYPE html>
-<!--
-    Me he basado en el template de Rocket Internet by template stock
-    Aquí sus datos
-
-	Rocket Internet by TEMPLATE STOCK
-	templatestock.co @templatestock
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-	<!-- Goggle Font -->
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-
-	<!-- Font Css -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
-	<!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<!-- Animation Css -->
-	<link rel="stylesheet" href="css/animate.css">
-
     <title>Skepsis</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #0a192f;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #00b4d8 !important;
+            letter-spacing: 1px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #00b4d8 !important;
+        }
+
+        /* Header con fondo elegante */
+        header {
+            height: 30vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('./images/bg.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: fadeInDown 1.2s ease;
+        }
+
+        .header-text p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .vertical-line {
+            width: 60px;
+            height: 3px;
+            background: #00b4d8;
+            margin: 20px auto;
+        }
+
+        /* Sección features */
+        .feature {
+            padding: 80px 0;
+        }
+
+        .feature-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-box h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #00b4d8;
+        }
+
+        .feature-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .feature img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div id="homeFullScreen">
-            <div class="header-text">
-                <h1>Skepsis</h1>
-                <div class="vertical-line"></div>
-                <p>
-                    I am a Systems Engineer with a Master's degree in Computational Systems. 
-                    <br />
-                    In my engineering thesis, I worked with biclusters, and in my master's thesis, I developed a genetic algorithm with a support vector machine as the objective function, running in parallel using CUDA.
-                </p>
-            </div><!-- End HeaderText -->
-        </div><!-- End homeFullScreen -->
-    </header><!-- End Header -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Skepsis</a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tesis">Tesis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <div class="header-text">
+            <h1>Skepsis</h1>
+            <div class="vertical-line"></div>
+            <p>
+                I am a Systems Engineer with a Master's degree in Computational Systems. 
+                <br />
+                In my engineering thesis, I worked with biclusters, and in my master's thesis, I developed a genetic algorithm with a support vector machine as the objective function, running in parallel using CUDA.
+            </p>
+        </div>
+    </header>
 
     <!-- Feature -->
-
-    <section class="feature">
+    <section class="feature" id="tesis">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-sm-12">
                     <div class="feature-box">
-                        <h1>Tesis de Ingenieria</h1>
+                        <h1>Tesis de Ingeniería</h1>
                         <p>Búsqueda de biclusters con significancia biológica
-                            basada en la identificación de patrones de
-                            comportamiento
-                            </p>
-                        <p style="font-style: oblique;"><b>Palabras claves:</b> biclustering, expresión de genes, significancia estadística, patrones
-                            de comportamiento en espejo. </p>
+                           basada en la identificación de patrones de comportamiento</p>
+                        <p style="font-style: oblique;">
+                            <b>Palabras clave:</b> biclustering, expresión de genes, significancia estadística, patrones
+                            de comportamiento en espejo.
+                        </p>
                     </div>
-                </div><!-- End col-md-6 nopadding-->
-                <div class="col-md-6 col-sm-6 ">
-                    <img src="./images/1.png">
-                </div><!-- End col-md-6 -->
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <img src="./images/1.png" alt="Tesis de Ingeniería">
+                </div>
+            </div>
 
-                <div class="clearfix"></div><!-- End clearfix -->
-
-                <div class="col-md-6 col-sm-6 nopadding">
-                    <img src="./images/ag.png">
-                </div><!-- End col-md-6 -->
-                <div class="col-md-6 col-sm-6">
+            <div class="row align-items-center mt-5">
+                <div class="col-md-6 col-sm-12">
+                    <img src="./images/ag.png" alt="Tesis de Maestría">
+                </div>
+                <div class="col-md-6 col-sm-12">
                     <div class="feature-box">
-                        <h1>Tesis de maestría</h1>
+                        <h1>Tesis de Maestría</h1>
                         <p>Algoritmo genético paralelo para la clasificación
-                            de subtipos de cáncer </p>
-                        <p style="font-style: oblique;"><b>Palabras clave:</b> máquinas de soporte vectorial, expresión
-                            genética, CUDA, algoritmos genéticos, clasificación de
-                            cáncer.</p>
+                           de subtipos de cáncer</p>
+                        <p style="font-style: oblique;">
+                            <b>Palabras clave:</b> máquinas de soporte vectorial, expresión
+                            genética, CUDA, algoritmos genéticos, clasificación de cáncer.
+                        </p>
                     </div>
-                </div><!-- End col-md-6 -->
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Proyectos -->
+    <section class="feature" id="proyectos">
+        <div class="container">
+            <h2 class="text-center mb-5">Proyectos</h2>
+            <p class="text-center">Proximamente.</p>
+        </div>
+    </section>
 
-    <!-- Main JS -->
-    <script type="text/javascript" src="js/jquery-main.js"></script>
+    <!-- Contacto -->
+    <section class="feature" id="contacto">
+        <div class="container text-center">
+            <h2>Contacto</h2>
+            <p>Envíame un correo a: <a href="mailto:skepsis.desarrollo@gmail.com">skepsis.desarrollo@gmail.com</a></p>
+        </div>
+    </section>
 
-    <!-- Bootstrap JS -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    <!-- Animation JS -->
-    <script type="text/javascript" src="js/wow.min.js"></script>
-
-    <!-- Custom JS -->
-    <script type="text/javascript" src="js/custom.js"></script>
-
+    <!-- JS -->
+    <script src="js/jquery-main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>
