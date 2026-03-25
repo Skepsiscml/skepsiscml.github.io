@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Skepsis</title>
+    <title>Claudia Leon</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -13,9 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Iconos -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> 
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <!-- Animaciones -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
 
     <!-- Estilos personalizados -->
@@ -81,6 +82,26 @@
             margin: 20px auto;
         }
 
+        /*ponencias*/
+        .ponencias-container {
+            display: flex; /* Activa el diseño de columnas */
+            justify-content: space-between; /* Espacio entre columnas */
+            gap: 20px; /* Espacio entre las cajas */
+            padding: 20px;
+        }
+
+        .ponencias-box {
+            flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+
+
+
+
         /* Sección features */
         .feature {
             padding: 80px 0;
@@ -134,13 +155,13 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Skepsis</a>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars"></span>
-            </button> -->
+            <a class="navbar-brand" href="#home">Claudia</a>           
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- <span class="fa fa-bars"></span> --> <i class="fa fa-bars"></i>
+                    </button>
+                <ul class="navbar-nav ms-auto">                
                     <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tesis">Tesis</a></li>
                     <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
@@ -154,7 +175,7 @@
     <!-- Header -->
     <header id="home">
         <div class="header-text">
-            <h1>Skepsis</h1>
+            <h1>Claudia Leon</h1>
             <div class="vertical-line"></div>
             <p>
                 I am a Systems Engineer with a Master's degree in Computational Systems. 
@@ -164,25 +185,9 @@
         </div>
     </header>
 
-    <!-- Feature -->
+    <!-- Tesis -->
     <section class="feature" id="tesis">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 col-sm-12">
-                    <div class="feature-box">
-                        <h1>Tesis de Ingeniería</h1>
-                        <p>Búsqueda de biclusters con significancia biológica
-                           basada en la identificación de patrones de comportamiento</p>
-                        <p style="font-style: oblique;">
-                            <b>Palabras clave:</b> biclustering, expresión de genes, significancia estadística, patrones
-                            de comportamiento en espejo.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <img src="./images/1.png" alt="Tesis de Ingeniería">
-                </div>
-            </div>
 
             <div class="row align-items-center mt-5">
                 <div class="col-md-6 col-sm-12">
@@ -197,10 +202,95 @@
                             <b>Palabras clave:</b> máquinas de soporte vectorial, expresión
                             genética, CUDA, algoritmos genéticos, clasificación de cáncer.
                         </p>
+                        <iframe src="files/tesis_maestria.pdf" width="100%" height="400px">
+                            <p>Tu navegador no soporta iframes. 
+                            <a href="files/tesis_maestria.pdf">Descarga el PDF</a>
+                            </p>
+                        </iframe>
                     </div>
                 </div>
             </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 col-sm-12">
+                    <div class="feature-box">
+                        <h1>Tesis de Ingeniería</h1>
+                        <p>Búsqueda de biclusters con significancia biológica
+                           basada en la identificación de patrones de comportamiento</p>
+                        <p style="font-style: oblique;">
+                            <b>Palabras clave:</b> biclustering, expresión de genes, significancia estadística, patrones
+                            de comportamiento en espejo.
+                        </p>
+                          <iframe src="files/tesis_ingenieria.pdf" width="100%" height="400px">
+                            <p>Tu navegador no soporta iframes. 
+                            <a href="files/tesis_ingenieria.pdf">Descarga el PDF</a>
+                            </p>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <img src="./images/1.png" alt="Tesis de Ingeniería">
+                </div>
+            </div>           
         </div>
+    </section>
+
+    <!-- Ponencias-->
+    <section class="feature" id="Ponencias">
+        <!-- <div class="feature"> -->
+            <h1 class="text-center mb-5">Ponencias</h1>
+            <div class="ponencias-container">                
+                <div class="ponencias-box">
+                    <h2>CIRC 2013</h2>
+                    <p>Búsqueda de biclusters con significancia biológica basada en la identificación de patrones de comportamiento</p>
+                    <p style="font-style: oblique;">
+                        <b>Palabras clave:</b> biclustering, expresión de genes, significancia estadística, patrones de comportamiento en espejo. 
+                    </p>
+                    <iframe src="files/2013_circ.pdf" width="70%" height="400px">
+                        <p>Tu navegador no soporta iframes. 
+                        <a href="files/2013_circ.pdf">Descarga el PDF</a>
+                        </p>
+                    </iframe>
+                </div>
+                <div class="ponencias-box">
+                    <h2>CIRC 2015</h2>
+                    <p>Algoritmo genético paralelo para la clasificación de subtipos de cáncer</p>
+                    <p style="font-style: oblique;">
+                        <b>Palabras clave:</b> máquinas de soporte vectorial, expresión
+                        genética, CUDA, algoritmos genéticos, clasificación de cáncer.
+                    </p>
+                    <iframe src="files/2015_circ.pdf" width="70%" height="400px">
+                        <p>Tu navegador no soporta iframes. 
+                        <a href="files/2015_circ.pdf">Descarga el PDF</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+            <div class="ponencias-container">
+                 <div class="ponencias-box">
+                    <h2>Semana de posgrado 2015</h2>
+                    <p>Presentacion de exposicion en la semana de posgrado de 2015, La Paz, B.C.S.</p>
+                    <!-- <p style="font-style: oblique;">
+                        <b>Palabras clave:</b> máquinas de soporte vectorial, expresión
+                        genética, CUDA, algoritmos genéticos, clasificación de cáncer.
+                    </p> -->
+                    <iframe src="files/semana_posgrado_2015.pdf" width="70%" height="400px">
+                        <p>Tu navegador no soporta iframes. 
+                        <a href="files/semana_posgrado_2015.pdf">Descarga el PDF</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+        <!-- </div> -->
+            <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pkCkVot7g2A?si=PhFNqy2ncQKwXmYL" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>            
+
+            <iframe width="0" height="0" src="https://www.youtube.com/embed/pkCkVot7g2A?si=PhFNqy2ncQKwXmYL?controls=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <--https://www.youtube.com/embed/ID_DEL_VIDEO->
+            </div> -->
     </section>
 
     <!-- Proyectos -->
